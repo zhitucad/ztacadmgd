@@ -4,14 +4,9 @@
         "ztacadmgd"
     </assembly>
     <members>
-        <member name="T:ztAcadMgd.DatabaseServices.DBText">
+        <member name="T:ztAcadMgd.DatabaseServices.Arc">
             <summary>  
-单行文字
-</summary>
-        </member>
-        <member name="T:ztAcadMgd.DatabaseServices.Circle">
-            <summary>  
-圆
+圆弧
 </summary>
         </member>
         <member name="M:AcGlobRemoveDMMReactor(AcDMMReactor*)">
@@ -13252,14 +13247,19 @@ for the targeted class.
 Internal use only. Base class for all overrules.
 </description>
         </member>
-        <member name="T:ztAcadMgd.DatabaseServices.Arc">
+        <member name="T:ztAcadMgd.DatabaseServices.DBText">
             <summary>  
-圆弧
+单行文字
 </summary>
         </member>
         <member name="T:ztAcadMgd.DatabaseServices.MText">
             <summary>  
 多行文字
+</summary>
+        </member>
+        <member name="T:ztAcadMgd.DatabaseServices.Circle">
+            <summary>  
+圆
 </summary>
         </member>
         <member name="T:ztAcadMgd.DatabaseServices.Line">

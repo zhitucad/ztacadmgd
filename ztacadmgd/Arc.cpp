@@ -83,6 +83,25 @@ void ztAcadMgd::DatabaseServices::Arc::EndAngle::set(double value)
 	}
 }
 
+double ztAcadMgd::DatabaseServices::Arc::Length::get()
+{
+	return GetImpObj()->length();
+}
+
+Vector3d ztAcadMgd::DatabaseServices::Arc::Normal::get()
+{
+	return ToVector3d(GetImpObj()->normal());
+}
+
+void ztAcadMgd::DatabaseServices::Arc::Normal::set(Vector3d value)
+{
+	int r = GetImpObj()->setNormal(GETVECTOR3D(value));
+	if (r != 0)
+	{
+		throw gcnew Autodesk::AutoCAD::Runtime::Exception(safe_cast<Autodesk::AutoCAD::Runtime::ErrorStatus>(r));
+	}
+}
+
 double ztAcadMgd::DatabaseServices::Arc::Radius::get()
 {
 	return GetImpObj()->radius();
@@ -109,4 +128,23 @@ void ztAcadMgd::DatabaseServices::Arc::StartAngle::set(double value)
 	{
 		throw gcnew Autodesk::AutoCAD::Runtime::Exception(safe_cast<Autodesk::AutoCAD::Runtime::ErrorStatus>(r));
 	}
+}
+
+double ztAcadMgd::DatabaseServices::Arc::Thickness::get()
+{
+	return GetImpObj()->thickness();
+}
+
+void ztAcadMgd::DatabaseServices::Arc::Thickness::set(double value)
+{
+	int r = GetImpObj()->setThickness(value);
+	if (r != 0)
+	{
+		throw gcnew Autodesk::AutoCAD::Runtime::Exception(safe_cast<Autodesk::AutoCAD::Runtime::ErrorStatus>(r));
+	}
+}
+
+double ztAcadMgd::DatabaseServices::Arc::TotalAngle::get()
+{
+	return GetImpObj()->totalAngle();
 }

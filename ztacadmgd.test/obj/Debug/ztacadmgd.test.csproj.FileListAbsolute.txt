@@ -8,3 +8,11 @@ C:\Users\Administrator\Documents\Visual Studio 2010\Projects\ztmgd\ztacadmgd.tes
 C:\Users\Administrator\Documents\Visual Studio 2010\Projects\ztmgd\ztacadmgd.test\bin\Debug\ztacadmgd.dll
 C:\Users\Administrator\Documents\Visual Studio 2010\Projects\ztmgd\ztacadmgd.test\bin\Debug\ztacadmgd.pdb
 C:\Users\Administrator\Documents\Visual Studio 2010\Projects\ztmgd\ztacadmgd.test\bin\Debug\ztacadmgd.xml
+C:\Users\Administrator\Documents\Visual Studio 2010\Projects\ztacadmgd\ztacadmgd.test\bin\Debug\ztacadmgd.test.dll
+C:\Users\Administrator\Documents\Visual Studio 2010\Projects\ztacadmgd\ztacadmgd.test\bin\Debug\ztacadmgd.test.pdb
+C:\Users\Administrator\Documents\Visual Studio 2010\Projects\ztacadmgd\ztacadmgd.test\bin\Debug\ztacadmgd.dll
+C:\Users\Administrator\Documents\Visual Studio 2010\Projects\ztacadmgd\ztacadmgd.test\bin\Debug\ztacadmgd.pdb
+C:\Users\Administrator\Documents\Visual Studio 2010\Projects\ztacadmgd\ztacadmgd.test\bin\Debug\ztacadmgd.xml
+C:\Users\Administrator\Documents\Visual Studio 2010\Projects\ztacadmgd\ztacadmgd.test\obj\Debug\ztacadmgd.test.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\Visual Studio 2010\Projects\ztacadmgd\ztacadmgd.test\obj\Debug\ztacadmgd.test.dll
+C:\Users\Administrator\Documents\Visual Studio 2010\Projects\ztacadmgd\ztacadmgd.test\obj\Debug\ztacadmgd.test.pdb

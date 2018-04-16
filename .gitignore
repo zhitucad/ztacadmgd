@@ -1,3 +1,5 @@
 
 *.sdf
 *.pch
+ztacadmgd/Debug
+ztacadmgd/x64/Debug

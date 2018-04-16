@@ -16609,16 +16609,16 @@ Class Autodesk.AutoCAD.DatabaseServices.BlockPropertiesTableRow: AutoLayout, Ans
     Autodesk.AutoCAD.DatabaseServices.ResultBuffer Item [Int32] 'get set' : 
     Autodesk.AutoCAD.DatabaseServices.ResultBuffer Item [Autodesk.AutoCAD.DatabaseServices.BlockPropertiesTableColumn] 'get set' : 
   Methods:
+    get_IsSynchronized(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_SyncRoot(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    CopyTo(Array, Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_Table(): PrivateScope, Public, HideBySig, SpecialName
     get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
     get_Item(BlockPropertiesTableColumn): PrivateScope, Public, HideBySig, SpecialName
     set_Item(Int32, ResultBuffer): PrivateScope, Public, HideBySig, SpecialName
     set_Item(BlockPropertiesTableColumn, ResultBuffer): PrivateScope, Public, HideBySig, SpecialName
     GetEnumerator(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
     get_Count(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
-    get_IsSynchronized(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
-    get_SyncRoot(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
-    CopyTo(Array, Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
-    get_Table(): PrivateScope, Public, HideBySig, SpecialName
 Class Autodesk.AutoCAD.DatabaseServices.BlockPropertiesTableRowCollection: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   Interfaces:
     System.Collections.ICollection

@@ -27,8 +27,12 @@ Class ztAcadMgd.DatabaseServices.Arc: AutoLayout, AnsiClass, Class, Public, Befo
     Void .ctor(Autodesk.AutoCAD.Geometry.Point3d, Double, Double, Double): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Properties:
+    Double TotalAngle 'get ' : 
+    Double Thickness 'get set' : 
     Double StartAngle 'get set' : 
     Double Radius 'get set' : 
+    Autodesk.AutoCAD.Geometry.Vector3d Normal 'get set' : 
+    Double Length 'get ' : 
     Double EndAngle 'get set' : 
     Autodesk.AutoCAD.Geometry.Point3d Center 'get set' : 
   Methods:
@@ -36,20 +40,29 @@ Class ztAcadMgd.DatabaseServices.Arc: AutoLayout, AnsiClass, Class, Public, Befo
     set_Center(Point3d): PrivateScope, Public, HideBySig, SpecialName
     get_EndAngle(): PrivateScope, Public, HideBySig, SpecialName
     set_EndAngle(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_Length(): PrivateScope, Public, HideBySig, SpecialName
+    get_Normal(): PrivateScope, Public, HideBySig, SpecialName
+    set_Normal(Vector3d): PrivateScope, Public, HideBySig, SpecialName
     get_Radius(): PrivateScope, Public, HideBySig, SpecialName
     set_Radius(Double): PrivateScope, Public, HideBySig, SpecialName
     get_StartAngle(): PrivateScope, Public, HideBySig, SpecialName
     set_StartAngle(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_Thickness(): PrivateScope, Public, HideBySig, SpecialName
+    set_Thickness(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_TotalAngle(): PrivateScope, Public, HideBySig, SpecialName
 Class ztAcadMgd.DatabaseServices.Circle: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :ztAcadMgd.DatabaseServices.Curve
     Void .ctor(Autodesk.AutoCAD.Geometry.Point3d, Autodesk.AutoCAD.Geometry.Vector3d, Double): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Properties:
     Double Radius 'get set' : 
+    Autodesk.AutoCAD.Geometry.Vector3d Normal 'get set' : 
     Autodesk.AutoCAD.Geometry.Point3d Center 'get set' : 
   Methods:
     get_Center(): PrivateScope, Public, HideBySig, SpecialName
     set_Center(Point3d): PrivateScope, Public, HideBySig, SpecialName
+    get_Normal(): PrivateScope, Public, HideBySig, SpecialName
+    set_Normal(Vector3d): PrivateScope, Public, HideBySig, SpecialName
     get_Radius(): PrivateScope, Public, HideBySig, SpecialName
     set_Radius(Double): PrivateScope, Public, HideBySig, SpecialName
 Class ztAcadMgd.DatabaseServices.DBText: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit

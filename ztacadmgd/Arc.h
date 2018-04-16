@@ -62,24 +62,50 @@ namespace ztAcadMgd {
 			Arc(Point3d center, Vector3d normal, double radius, double startAngle, double endAngle);
 			property Point3d Center
 			{
+				[System::ComponentModel::Category("Geometry")]
 				Point3d get();
 				void set(Point3d value);
 			}
 			property double EndAngle
 			{
+				[System::ComponentModel::Category("Geometry")]
 				double get();
 				void set(double value);
 			}
+			property double Length
+			{
+				[System::ComponentModel::Category("Geometry")]
+				double get();
+			}
+			property Vector3d Normal
+			{
+				[System::ComponentModel::Category("Geometry")]
+				Vector3d get();
+				void set(Vector3d value);
+			}
 			property double Radius
 			{
+				[System::ComponentModel::Category("Geometry")]
 				double get();
 				void set(double value);
 			}
 			property double StartAngle
 			{
+				[System::ComponentModel::Category("Geometry")]
+				double get();
+				void set(double value);
+			}
+			property double Thickness
+			{
+				[System::ComponentModel::Category("General")]
 				double get();
 				void set(double value);
 			}	
+			property double TotalAngle
+			{
+				[System::ComponentModel::Category("Geometry")]
+				double get();
+			}
 		} ;
 
 	}

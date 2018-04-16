@@ -63,6 +63,20 @@ void ztAcadMgd::DatabaseServices::Circle::Center::set(Point3d value)
 	}
 }
 
+Vector3d ztAcadMgd::DatabaseServices::Circle::Normal::get()
+{
+	return ToVector3d(GetImpObj()->normal());
+}
+
+void ztAcadMgd::DatabaseServices::Circle::Normal::set(Vector3d value)
+{
+	int r = GetImpObj()->setNormal(GETVECTOR3D(value));
+	if (r != 0)
+	{
+		throw gcnew Autodesk::AutoCAD::Runtime::Exception(safe_cast<Autodesk::AutoCAD::Runtime::ErrorStatus>(r));
+	}
+}
+
 double ztAcadMgd::DatabaseServices::Circle::Radius::get()
 {
 	return GetImpObj()->radius();

@@ -59,11 +59,19 @@ namespace ztAcadMgd {
 			//-		__property void set_Center(Point2d point);
 			//-		__property Point2d get_Center();
 			Circle(Point3d center, Vector3d normal, double radius);
+			[System::ComponentModel::Category("Geometry")]
 			property Point3d Center
 			{
 				Point3d get();
 				void set(Point3d value);
 			}
+			[System::ComponentModel::Category("Geometry")]
+			property Vector3d Normal
+			{
+				Vector3d get();
+				void set(Vector3d value);
+			}
+			[System::ComponentModel::Category("Geometry")]
 			property double Radius
 			{
 				double get();
