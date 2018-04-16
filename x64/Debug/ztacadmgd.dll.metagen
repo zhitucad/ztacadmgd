@@ -1,0 +1,76 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly ztacadmgd, Version=1.0.*, Culture=固定语言(固定国家/地区): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly Acdbmgd, Version=19.0.*, Culture=固定语言(固定国家/地区): 
+	hash=None, flags=None
+Assembly Acmgd, Version=19.0.*, Culture=固定语言(固定国家/地区): 
+	hash=None, flags=None
+Assembly AcCui, Version=19.0.*, Culture=固定语言(固定国家/地区): 
+	hash=None, flags=None
+Assembly Microsoft.VisualC, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Class ztAcadMgd.DatabaseServices.Curve: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :Autodesk.AutoCAD.DatabaseServices.Entity
+Class ztAcadMgd.DatabaseServices.Arc: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ztAcadMgd.DatabaseServices.Curve
+    Void .ctor(Autodesk.AutoCAD.Geometry.Point3d, Autodesk.AutoCAD.Geometry.Vector3d, Double, Double, Double): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Autodesk.AutoCAD.Geometry.Point3d, Double, Double, Double): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Double StartAngle 'get set' : 
+    Double Radius 'get set' : 
+    Double EndAngle 'get set' : 
+    Autodesk.AutoCAD.Geometry.Point3d Center 'get set' : 
+  Methods:
+    get_Center(): PrivateScope, Public, HideBySig, SpecialName
+    set_Center(Point3d): PrivateScope, Public, HideBySig, SpecialName
+    get_EndAngle(): PrivateScope, Public, HideBySig, SpecialName
+    set_EndAngle(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_Radius(): PrivateScope, Public, HideBySig, SpecialName
+    set_Radius(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_StartAngle(): PrivateScope, Public, HideBySig, SpecialName
+    set_StartAngle(Double): PrivateScope, Public, HideBySig, SpecialName
+Class ztAcadMgd.DatabaseServices.Circle: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ztAcadMgd.DatabaseServices.Curve
+    Void .ctor(Autodesk.AutoCAD.Geometry.Point3d, Autodesk.AutoCAD.Geometry.Vector3d, Double): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Double Radius 'get set' : 
+    Autodesk.AutoCAD.Geometry.Point3d Center 'get set' : 
+  Methods:
+    get_Center(): PrivateScope, Public, HideBySig, SpecialName
+    set_Center(Point3d): PrivateScope, Public, HideBySig, SpecialName
+    get_Radius(): PrivateScope, Public, HideBySig, SpecialName
+    set_Radius(Double): PrivateScope, Public, HideBySig, SpecialName
+Class ztAcadMgd.DatabaseServices.DBText: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :Autodesk.AutoCAD.DatabaseServices.Entity
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class ztAcadMgd.DatabaseServices.Line: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ztAcadMgd.DatabaseServices.Curve
+    Void .ctor(Autodesk.AutoCAD.Geometry.Point3d, Autodesk.AutoCAD.Geometry.Point3d): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Autodesk.AutoCAD.Geometry.Point3d StartPoint 'get set' : 
+    Autodesk.AutoCAD.Geometry.Point3d EndPoint 'get set' : 
+  Methods:
+    get_EndPoint(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    set_EndPoint(Point3d): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_StartPoint(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    set_StartPoint(Point3d): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    GetValue(String): PrivateScope, Public, HideBySig
+    SetValue(String, String): PrivateScope, Public, HideBySig
+    AddPersistentReactor(ObjectId): PrivateScope, Public, HideBySig
+    RemovePersistentReactor(ObjectId): PrivateScope, Public, HideBySig
+Class ztAcadMgd.DatabaseServices.MText: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :Autodesk.AutoCAD.DatabaseServices.Entity
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

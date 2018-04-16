@@ -1,0 +1,5 @@
+C:\ztmgd\ztmgd.test.dll
+C:\ztmgd\ztmgd.test.pdb
+C:\Users\Administrator\Documents\Visual Studio 2010\Projects\ztmgd\ztmgd.test\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\Visual Studio 2010\Projects\ztmgd\ztmgd.test\obj\Debug\ztmgd.test.dll
+C:\Users\Administrator\Documents\Visual Studio 2010\Projects\ztmgd\ztmgd.test\obj\Debug\ztmgd.test.pdb
