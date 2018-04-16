@@ -21,6 +21,33 @@ Assembly Microsoft.VisualC, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b0
 	hash=None, flags=None
 Class ztAcadMgd.DatabaseServices.Curve: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :Autodesk.AutoCAD.DatabaseServices.Entity
+  Properties:
+    Autodesk.AutoCAD.Geometry.Point3d StartPoint 'get set' : 
+    Double StartParam 'get ' : 
+    Boolean IsPeriodic 'get ' : 
+    Autodesk.AutoCAD.Geometry.Point3d EndPoint 'get set' : 
+    Double EndParam 'get ' : 
+    Boolean Closed 'get ' : 
+    Double Area 'get ' : 
+  Methods:
+    GetDistanceAtParameter(Double): PrivateScope, Public, HideBySig
+    GetDistAtPoint(Point3d): PrivateScope, Public, HideBySig
+    GetFirstDerivative(Double): PrivateScope, Public, HideBySig
+    GetFirstDerivative(Point3d): PrivateScope, Public, HideBySig
+    GetParameterAtDistance(Double): PrivateScope, Public, HideBySig
+    GetParameterAtPoint(Point3d): PrivateScope, Public, HideBySig
+    GetPointAtDist(Double): PrivateScope, Public, HideBySig
+    GetPointAtParameter(Double): PrivateScope, Public, HideBySig
+    GetSecondDerivative(Double): PrivateScope, Public, HideBySig
+    get_Area(): PrivateScope, Public, HideBySig, SpecialName
+    get_Closed(): PrivateScope, Public, HideBySig, SpecialName
+    get_EndParam(): PrivateScope, Public, HideBySig, SpecialName
+    get_EndPoint(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_EndPoint(Point3d): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_IsPeriodic(): PrivateScope, Public, HideBySig, SpecialName
+    get_StartParam(): PrivateScope, Public, HideBySig, SpecialName
+    get_StartPoint(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_StartPoint(Point3d): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
 Class ztAcadMgd.DatabaseServices.Arc: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :ztAcadMgd.DatabaseServices.Curve
     Void .ctor(Autodesk.AutoCAD.Geometry.Point3d, Autodesk.AutoCAD.Geometry.Vector3d, Double, Double, Double): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
@@ -50,11 +77,27 @@ Class ztAcadMgd.DatabaseServices.Arc: AutoLayout, AnsiClass, Class, Public, Befo
     get_Thickness(): PrivateScope, Public, HideBySig, SpecialName
     set_Thickness(Double): PrivateScope, Public, HideBySig, SpecialName
     get_TotalAngle(): PrivateScope, Public, HideBySig, SpecialName
+Class ztAcadMgd.DatabaseServices.BlockReference: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :Autodesk.AutoCAD.DatabaseServices.Entity
+    Void .ctor(Autodesk.AutoCAD.Geometry.Point3d, System.ValueType): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Double Rotation 'get set' : 
+    Autodesk.AutoCAD.Geometry.Point3d Position 'get set' : 
+    Autodesk.AutoCAD.Geometry.Vector3d Normal 'get set' : 
+  Methods:
+    get_Normal(): PrivateScope, Public, HideBySig, SpecialName
+    set_Normal(Vector3d): PrivateScope, Public, HideBySig, SpecialName
+    get_Position(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    set_Position(Point3d): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_Rotation(): PrivateScope, Public, HideBySig, SpecialName
+    set_Rotation(Double): PrivateScope, Public, HideBySig, SpecialName
 Class ztAcadMgd.DatabaseServices.Circle: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :ztAcadMgd.DatabaseServices.Curve
     Void .ctor(Autodesk.AutoCAD.Geometry.Point3d, Autodesk.AutoCAD.Geometry.Vector3d, Double): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Properties:
+    Double Thickness 'get set' : 
     Double Radius 'get set' : 
     Autodesk.AutoCAD.Geometry.Vector3d Normal 'get set' : 
     Autodesk.AutoCAD.Geometry.Point3d Center 'get set' : 
@@ -65,9 +108,43 @@ Class ztAcadMgd.DatabaseServices.Circle: AutoLayout, AnsiClass, Class, Public, B
     set_Normal(Vector3d): PrivateScope, Public, HideBySig, SpecialName
     get_Radius(): PrivateScope, Public, HideBySig, SpecialName
     set_Radius(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_Thickness(): PrivateScope, Public, HideBySig, SpecialName
+    set_Thickness(Double): PrivateScope, Public, HideBySig, SpecialName
 Class ztAcadMgd.DatabaseServices.DBText: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :Autodesk.AutoCAD.DatabaseServices.Entity
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Double WidthFactor 'get set' : 
+    Double Thickness 'get set' : 
+    System.ValueType TextStyle 'get set' ObjectId IsBoxed : 
+    System.String TextString 'get set' : 
+    Double Rotation 'get set' : 
+    Autodesk.AutoCAD.Geometry.Point3d Position 'get set' : 
+    Double Oblique 'get set' : 
+    Autodesk.AutoCAD.Geometry.Vector3d Normal 'get set' : 
+    Double Height 'get set' : 
+    Autodesk.AutoCAD.Geometry.Point3d AlignmentPoint 'get set' : 
+  Methods:
+    get_AlignmentPoint(): PrivateScope, Public, HideBySig, SpecialName
+    set_AlignmentPoint(Point3d): PrivateScope, Public, HideBySig, SpecialName
+    get_Height(): PrivateScope, Public, HideBySig, SpecialName
+    set_Height(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_Normal(): PrivateScope, Public, HideBySig, SpecialName
+    set_Normal(Vector3d): PrivateScope, Public, HideBySig, SpecialName
+    get_Oblique(): PrivateScope, Public, HideBySig, SpecialName
+    set_Oblique(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_Position(): PrivateScope, Public, HideBySig, SpecialName
+    set_Position(Point3d): PrivateScope, Public, HideBySig, SpecialName
+    get_Rotation(): PrivateScope, Public, HideBySig, SpecialName
+    set_Rotation(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_TextString(): PrivateScope, Public, HideBySig, SpecialName
+    set_TextString(String): PrivateScope, Public, HideBySig, SpecialName
+    get_TextStyle(): PrivateScope, Public, HideBySig, SpecialName
+    set_TextStyle(ValueType ObjectId IsBoxed): PrivateScope, Public, HideBySig, SpecialName
+    get_Thickness(): PrivateScope, Public, HideBySig, SpecialName
+    set_Thickness(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_WidthFactor(): PrivateScope, Public, HideBySig, SpecialName
+    set_WidthFactor(Double): PrivateScope, Public, HideBySig, SpecialName
 Class ztAcadMgd.DatabaseServices.Line: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :ztAcadMgd.DatabaseServices.Curve
     Void .ctor(Autodesk.AutoCAD.Geometry.Point3d, Autodesk.AutoCAD.Geometry.Point3d): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
@@ -87,3 +164,50 @@ Class ztAcadMgd.DatabaseServices.Line: AutoLayout, AnsiClass, Class, Public, Bef
 Class ztAcadMgd.DatabaseServices.MText: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :Autodesk.AutoCAD.DatabaseServices.Entity
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Double Width 'get set' : 
+    System.ValueType TextStyle 'get set' ObjectId IsBoxed : 
+    Double TextHeight 'get set' : 
+    Double Rotation 'get set' : 
+    Autodesk.AutoCAD.Geometry.Vector3d Normal 'get set' : 
+    Autodesk.AutoCAD.Geometry.Point3d Location 'get set' : 
+    System.String Contents 'get set' : 
+    System.String ColorChange 'get ' : 
+    System.String BlockEnd 'get ' : 
+    Double Ascent 'get ' : 
+    System.String AlignChange 'get ' : 
+    Double ActualWidth 'get ' : 
+    Double ActualHeight 'get ' : 
+  Methods:
+    get_ActualHeight(): PrivateScope, Public, HideBySig, SpecialName
+    get_ActualWidth(): PrivateScope, Public, HideBySig, SpecialName
+    get_AlignChange(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Ascent(): PrivateScope, Public, HideBySig, SpecialName
+    get_BlockEnd(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_ColorChange(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_Contents(): PrivateScope, Public, HideBySig, SpecialName
+    set_Contents(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Location(): PrivateScope, Public, HideBySig, SpecialName
+    set_Location(Point3d): PrivateScope, Public, HideBySig, SpecialName
+    get_Normal(): PrivateScope, Public, HideBySig, SpecialName
+    set_Normal(Vector3d): PrivateScope, Public, HideBySig, SpecialName
+    get_Rotation(): PrivateScope, Public, HideBySig, SpecialName
+    set_Rotation(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_TextHeight(): PrivateScope, Public, HideBySig, SpecialName
+    set_TextHeight(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_TextStyle(): PrivateScope, Public, HideBySig, SpecialName
+    set_TextStyle(ValueType ObjectId IsBoxed): PrivateScope, Public, HideBySig, SpecialName
+    get_Width(): PrivateScope, Public, HideBySig, SpecialName
+    set_Width(Double): PrivateScope, Public, HideBySig, SpecialName
+Class ztAcadMgd.DatabaseServices.Polyline: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ztAcadMgd.DatabaseServices.Curve
+    Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class ztAcadMgd.DatabaseServices.Group: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :Autodesk.AutoCAD.DatabaseServices.DBObject
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String Name 'get set' : 
+  Methods:
+    get_Name(): PrivateScope, Public, HideBySig, SpecialName
+    set_Name(String): PrivateScope, Public, HideBySig, SpecialName

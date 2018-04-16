@@ -42,3 +42,157 @@ ztAcadMgd::DatabaseServices::DBText::DBText (System::IntPtr unmanagedPointer, bo
 	: Autodesk::AutoCAD::DatabaseServices::Entity (unmanagedPointer, bAutoDelete)
 {
 }
+
+Point3d ztAcadMgd::DatabaseServices::DBText::AlignmentPoint::get()
+{
+	return ToPoint3d(GetImpObj()->alignmentPoint());
+}
+
+void ztAcadMgd::DatabaseServices::DBText::AlignmentPoint::set(Point3d value)
+{
+	int r = GetImpObj()->setAlignmentPoint(GETPOINT3D(value));
+	if (r != 0)
+	{
+		throw gcnew Autodesk::AutoCAD::Runtime::Exception(safe_cast<Autodesk::AutoCAD::Runtime::ErrorStatus>(r));
+	}
+}
+
+double ztAcadMgd::DatabaseServices::DBText::Height::get()
+{
+	return GetImpObj()->height();
+}
+
+void ztAcadMgd::DatabaseServices::DBText::Height::set(double value)
+{
+	int r = GetImpObj()->setHeight(value);
+	if (r != 0)
+	{
+		throw gcnew Autodesk::AutoCAD::Runtime::Exception(safe_cast<Autodesk::AutoCAD::Runtime::ErrorStatus>(r));
+	}
+}
+
+Vector3d ztAcadMgd::DatabaseServices::DBText::Normal::get()
+{
+	return ToVector3d(GetImpObj()->normal());
+}
+
+void ztAcadMgd::DatabaseServices::DBText::Normal::set(Vector3d value)
+{
+	int r = GetImpObj()->setNormal(GETVECTOR3D(value));
+	if (r != 0)
+	{
+		throw gcnew Autodesk::AutoCAD::Runtime::Exception(safe_cast<Autodesk::AutoCAD::Runtime::ErrorStatus>(r));
+	}
+}
+
+double ztAcadMgd::DatabaseServices::DBText::Oblique::get()
+{
+	return GetImpObj()->oblique();
+}
+
+void ztAcadMgd::DatabaseServices::DBText::Oblique::set(double value)
+{
+	int r = GetImpObj()->setOblique(value);
+	if (r != 0)
+	{
+		throw gcnew Autodesk::AutoCAD::Runtime::Exception(safe_cast<Autodesk::AutoCAD::Runtime::ErrorStatus>(r));
+	}
+}
+
+Point3d ztAcadMgd::DatabaseServices::DBText::Position::get()
+{
+	return ToPoint3d(GetImpObj()->position());
+}
+
+void ztAcadMgd::DatabaseServices::DBText::Position::set(Point3d value)
+{
+	int r = GetImpObj()->setPosition(GETPOINT3D(value));
+	if (r != 0)
+	{
+		throw gcnew Autodesk::AutoCAD::Runtime::Exception(safe_cast<Autodesk::AutoCAD::Runtime::ErrorStatus>(r));
+	}
+}
+
+double ztAcadMgd::DatabaseServices::DBText::Rotation::get()
+{
+	return GetImpObj()->rotation();
+}
+
+void ztAcadMgd::DatabaseServices::DBText::Rotation::set(double value)
+{
+	int r = GetImpObj()->setRotation(value);
+	if (r != 0)
+	{
+		throw gcnew Autodesk::AutoCAD::Runtime::Exception(safe_cast<Autodesk::AutoCAD::Runtime::ErrorStatus>(r));
+	}
+}
+
+String^ ztAcadMgd::DatabaseServices::DBText::TextString::get()
+{
+	return CIFToString(GetImpObj()->textString());
+}
+
+void ztAcadMgd::DatabaseServices::DBText::TextString::set(String^ value)
+{
+	int r = GetImpObj()->setTextString(StringToCIF(value));
+	if (r != 0)
+	{
+		throw gcnew Autodesk::AutoCAD::Runtime::Exception(safe_cast<Autodesk::AutoCAD::Runtime::ErrorStatus>(r));
+	}
+}
+
+ObjectId^ ztAcadMgd::DatabaseServices::DBText::TextStyle::get()
+{
+	return ToObjectId(GetImpObj()->textStyle());
+}
+
+void ztAcadMgd::DatabaseServices::DBText::TextStyle::set(Autodesk::AutoCAD::DatabaseServices::ObjectId^ value)
+{
+	int r = GetImpObj()->setTextStyle(GETOBJECTID(value));
+	if (r != 0)
+	{
+		throw gcnew Autodesk::AutoCAD::Runtime::Exception(safe_cast<Autodesk::AutoCAD::Runtime::ErrorStatus>(r));
+	}
+}
+
+double ztAcadMgd::DatabaseServices::DBText::Thickness::get()
+{
+	return GetImpObj()->thickness();
+}
+
+void ztAcadMgd::DatabaseServices::DBText::Thickness::set(double value)
+{
+	int r = GetImpObj()->setThickness(value);
+	if (r != 0)
+	{
+		throw gcnew Autodesk::AutoCAD::Runtime::Exception(safe_cast<Autodesk::AutoCAD::Runtime::ErrorStatus>(r));
+	}
+}
+
+//TextVerticalMode ztAcadMgd::DatabaseServices::DBText::VerticalMode::get()
+//{
+//	return GetImpObj()->verticalMode();
+//}
+//
+//void ztAcadMgd::DatabaseServices::DBText::VerticalMode::set(TextVerticalMode value)
+//{
+//	int r = GetImpObj()->setVerticalMode((int)value);
+//	if (r != 0)
+//	{
+//		throw gcnew Autodesk::AutoCAD::Runtime::Exception(safe_cast<Autodesk::AutoCAD::Runtime::ErrorStatus>(r));
+//	}
+//}
+
+double ztAcadMgd::DatabaseServices::DBText::WidthFactor::get()
+{
+	return GetImpObj()->widthFactor();
+}
+
+void ztAcadMgd::DatabaseServices::DBText::WidthFactor::set(double value)
+{
+	int r = GetImpObj()->setWidthFactor(value);
+	if (r != 0)
+	{
+		throw gcnew Autodesk::AutoCAD::Runtime::Exception(safe_cast<Autodesk::AutoCAD::Runtime::ErrorStatus>(r));
+	}
+}

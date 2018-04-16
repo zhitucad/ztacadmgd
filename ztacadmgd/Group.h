@@ -19,14 +19,16 @@
 // (Rights in Technical Data and Computer Software), as applicable.
 
 //-----------------------------------------------------------------------------
-//- DBText.h
+//- Entity.h
 #pragma once
 //#include "Entity.h"
+#include "Utility.h"
 
 //-----------------------------------------------------------------------------
 using namespace System ;
-using namespace Autodesk::AutoCAD::Geometry ;
 using namespace Autodesk::AutoCAD::DatabaseServices ;
+using namespace Autodesk::AutoCAD::Geometry ;
+using namespace Autodesk::AutoCAD::Runtime ;
 
 //-----------------------------------------------------------------------------
 //- Wizard Generated Custom Object .NET Wrapper
@@ -36,21 +38,21 @@ namespace ztAcadMgd {
 	namespace DatabaseServices {
 
 		/// <summary>  
-		/// 单行文字
+		/// 组
 		/// </summary> 
-		[Autodesk::AutoCAD::Runtime::Wrapper("AcDbText")]
-		public ref class DBText : public Autodesk::AutoCAD::DatabaseServices::Entity {
+		[Wrapper("AcDbGroup")]
+		public ref class Group : public Autodesk::AutoCAD::DatabaseServices::DBObject {
 
 		public:
 			//- Constructor
-			DBText () ;
+			Group () ;
 
 		internal:
-			DBText (System::IntPtr unmanagedPointer, bool bAutoDelete) ;
+			Group (System::IntPtr unmanagedPointer, bool bAutoDelete) ;
 
 			//- Returns the unmanaged ARX Object
-			inline AcDbText *GetImpObj () {
-				return (static_cast<AcDbText *>(UnmanagedObject.ToPointer ())) ;
+			inline AcDbGroup *GetImpObj () {
+				return (static_cast<AcDbGroup *>(UnmanagedObject.ToPointer ())) ;
 			}
 
 		public:
@@ -58,62 +60,10 @@ namespace ztAcadMgd {
 			//- the format you must use is
 			//-		__property void set_Center(Point2d point);
 			//-		__property Point2d get_Center();
-			property Point3d AlignmentPoint
-			{
-				Point3d get();
-				void set(Point3d value);
-			}
-			property double Height
-			{
-				double get();
-				void set(double value);
-			}
-			[System::ComponentModel::Category("Geometry")]
-			property Vector3d Normal
-			{
-				Vector3d get();
-				void set(Vector3d value);
-			}
-			[System::ComponentModel::Category("Geometry")]
-			property double Oblique
-			{
-				double get();
-				void set(double value);
-			}
-			property Point3d Position
-			{
-				Point3d get();
-				void set(Point3d value);
-			}
-			property double Rotation
-			{
-				double get();
-				void set(double value);
-			}
-			property String^ TextString
+			property String^ Name
 			{
 				String^ get();
 				void set(String^ value);
-			}
-			property Autodesk::AutoCAD::DatabaseServices::ObjectId^ TextStyle
-			{
-				 Autodesk::AutoCAD::DatabaseServices::ObjectId^ get();
-				void set(Autodesk::AutoCAD::DatabaseServices::ObjectId^ value);
-			}
-			property double Thickness
-			{
-				double get();
-				void set(double value);
-			}
-			/*property TextVerticalMode VerticalMode
-			{
-				TextVerticalMode get();
-				void set(TextVerticalMode value);
-			}*/
-			property double WidthFactor
-			{
-				double get();
-				void set(double value);
 			}
 		} ;
 

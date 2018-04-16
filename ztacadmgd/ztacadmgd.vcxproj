@@ -85,12 +85,15 @@
     <ClCompile Include="acrxEntryPoint.cpp" />
     <ClCompile Include="Arc.cpp" />
     <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="BlockReference.cpp" />
     <ClCompile Include="Circle.cpp" />
     <ClCompile Include="Curve.cpp" />
     <ClCompile Include="DBText.cpp" />
+    <ClCompile Include="Dimension.cpp" />
     <ClCompile Include="DocData.cpp" />
     <ClCompile Include="Line.cpp" />
     <ClCompile Include="MText.cpp" />
+    <ClCompile Include="Polyline.cpp" />
     <ClCompile Include="StdAfx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
@@ -99,18 +102,23 @@
     </ClCompile>
     <ClCompile Include="Utility.cpp" />
     <ClCompile Include="ztacadmgd.cpp" />
+    <ClCompile Include="Group.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Arc.h" />
+    <ClInclude Include="BlockReference.h" />
     <ClInclude Include="Circle.h" />
     <ClInclude Include="Curve.h" />
     <ClInclude Include="DBText.h" />
+    <ClInclude Include="Dimension.h" />
     <ClInclude Include="DocData.h" />
     <ClInclude Include="Line.h" />
     <ClInclude Include="MText.h" />
+    <ClInclude Include="Polyline.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="StdAfx.h" />
     <ClInclude Include="Utility.h" />
+    <ClInclude Include="Group.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="ztacadmgd.rc" />

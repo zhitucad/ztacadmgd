@@ -58,6 +58,50 @@ namespace ztAcadMgd {
 			//- the format you must use is
 			//-		__property void set_Center(Point2d point);
 			//-		__property Point2d get_Center();
+			/*Point3d GetClosestPointTo(Point3d givenPoint, bool extend);
+			Point3d GetClosestPointTo(Point3d givenPoint, Vector3d direction, bool extend);*/
+			double GetDistanceAtParameter(double value);
+			double GetDistAtPoint(Point3d point);
+			Vector3d GetFirstDerivative(Point3d point);
+			Vector3d GetFirstDerivative(double value);
+			/*DBObjectCollection GetOffsetCurves(double offsetDist);
+			DBObjectCollection GetOffsetCurvesGivenPlaneNormal(Vector3d normal, double offsetDist);
+			Curve GetOrthoProjectedCurve(Plane planeToProjectOn);*/
+			double GetParameterAtDistance(double dist);
+			double GetParameterAtPoint(Point3d point);
+			Point3d GetPointAtDist(double value);
+			Point3d GetPointAtParameter(double value);
+			Vector3d GetSecondDerivative(double value);
+			property double Area
+			{
+				double get();
+			}
+			property bool Closed
+			{
+				bool get();
+			}
+			property double EndParam
+			{
+				double get();
+			}
+			property virtual Point3d EndPoint
+			{
+				Point3d get();
+				void set(Point3d value);
+			}
+			property bool IsPeriodic
+			{
+				bool get();
+			}
+			property double StartParam
+			{
+				double get();
+			}
+			property virtual Point3d StartPoint
+			{
+				Point3d get();
+				void set(Point3d value);
+			}
 		} ;
 
 	}

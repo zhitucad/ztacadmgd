@@ -21,7 +21,7 @@
 
 //-----------------------------------------------------------------------------
 #include "StdAfx.h"
-#include "Circle.h"
+#include "BlockReference.h"
 
 //-----------------------------------------------------------------------------
 //- Template class that wraps GCHandle from mscorlib.dll
@@ -32,43 +32,28 @@
 #include "mgdinterop.h"
 
 //-----------------------------------------------------------------------------
-ztAcadMgd::DatabaseServices::Circle::Circle () 
-	: ztAcadMgd::DatabaseServices::Curve ((System::IntPtr)new AcDbCircle (), true)
+ztAcadMgd::DatabaseServices::BlockReference::BlockReference () 
+	: Autodesk::AutoCAD::DatabaseServices::Entity ((System::IntPtr)new AcDbBlockReference (), true)
 {
 }
 
 //-----------------------------------------------------------------------------
-ztAcadMgd::DatabaseServices::Circle::Circle (System::IntPtr unmanagedPointer, bool bAutoDelete)
-	: ztAcadMgd::DatabaseServices::Curve (unmanagedPointer, bAutoDelete)
+ztAcadMgd::DatabaseServices::BlockReference::BlockReference (System::IntPtr unmanagedPointer, bool bAutoDelete)
+	: Autodesk::AutoCAD::DatabaseServices::Entity (unmanagedPointer, bAutoDelete)
 {
 }
 
-ztAcadMgd::DatabaseServices::Circle::Circle(Point3d center, Vector3d normal, double radius)
-	: Curve((IntPtr)new AcDbCircle(GETPOINT3D(center), GETVECTOR3D(normal), radius), true)
+ztAcadMgd::DatabaseServices::BlockReference::BlockReference (Point3d position, Autodesk::AutoCAD::DatabaseServices::ObjectId^ blockTableRecord)
+	: Autodesk::AutoCAD::DatabaseServices::Entity ((IntPtr)new AcDbBlockReference(GETPOINT3D(position), GETOBJECTID(blockTableRecord)), true)
 {
-
 }
 
-Point3d ztAcadMgd::DatabaseServices::Circle::Center::get()
-{
-	return ToPoint3d(GetImpObj()->center());
-}
-
-void ztAcadMgd::DatabaseServices::Circle::Center::set(Point3d value)
-{
-	int r = GetImpObj()->setCenter(GETPOINT3D(value));
-	if (r != 0)
-	{
-		throw gcnew Autodesk::AutoCAD::Runtime::Exception(safe_cast<Autodesk::AutoCAD::Runtime::ErrorStatus>(r));
-	}
-}
-
-Vector3d ztAcadMgd::DatabaseServices::Circle::Normal::get()
+Vector3d ztAcadMgd::DatabaseServices::BlockReference::Normal::get()
 {
 	return ToVector3d(GetImpObj()->normal());
 }
 
-void ztAcadMgd::DatabaseServices::Circle::Normal::set(Vector3d value)
+void ztAcadMgd::DatabaseServices::BlockReference::Normal::set(Vector3d value)
 {
 	int r = GetImpObj()->setNormal(GETVECTOR3D(value));
 	if (r != 0)
@@ -77,28 +62,28 @@ void ztAcadMgd::DatabaseServices::Circle::Normal::set(Vector3d value)
 	}
 }
 
-double ztAcadMgd::DatabaseServices::Circle::Radius::get()
+Point3d ztAcadMgd::DatabaseServices::BlockReference::Position::get()
 {
-	return GetImpObj()->radius();
+	return ToPoint3d(GetImpObj()->position());
 }
 
-void ztAcadMgd::DatabaseServices::Circle::Radius::set(double value)
+void ztAcadMgd::DatabaseServices::BlockReference::Position::set(Point3d value)
 {
-	int r = GetImpObj()->setRadius(value);
+	int r = GetImpObj()->setPosition(GETPOINT3D(value));
 	if (r != 0)
 	{
 		throw gcnew Autodesk::AutoCAD::Runtime::Exception(safe_cast<Autodesk::AutoCAD::Runtime::ErrorStatus>(r));
 	}
 }
 
-double ztAcadMgd::DatabaseServices::Circle::Thickness::get()
+double ztAcadMgd::DatabaseServices::BlockReference::Rotation::get()
 {
-	return GetImpObj()->thickness();
+	return GetImpObj()->rotation();
 }
 
-void ztAcadMgd::DatabaseServices::Circle::Thickness::set(double value)
+void ztAcadMgd::DatabaseServices::BlockReference::Rotation::set(double value)
 {
-	int r = GetImpObj()->setThickness(value);
+	int r = GetImpObj()->setRotation(value);
 	if (r != 0)
 	{
 		throw gcnew Autodesk::AutoCAD::Runtime::Exception(safe_cast<Autodesk::AutoCAD::Runtime::ErrorStatus>(r));

@@ -77,6 +77,12 @@ namespace ztAcadMgd {
 				double get();
 				void set(double value);
 			}
+			[System::ComponentModel::Category("Geometry")]
+			property double Thickness
+			{
+				double get();
+				void set(double value);
+			}
 		} ;
 
 	}

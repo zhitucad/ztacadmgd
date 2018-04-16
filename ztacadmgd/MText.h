@@ -58,6 +58,65 @@ namespace ztAcadMgd {
 			//- the format you must use is
 			//-		__property void set_Center(Point2d point);
 			//-		__property Point2d get_Center();
+			property double ActualHeight
+			{
+				double get();
+			}
+			property double ActualWidth
+			{
+				double get();
+			}
+			property static String^ AlignChange
+			{
+				String^ get();
+			}
+			property double Ascent
+			{
+				double get();
+			}
+			property static String^ BlockEnd
+			{
+				String^ get();
+			}
+			property static String^ ColorChange
+			{
+				String^ get();
+			}
+			property String^ Contents
+			{
+				String^ get();
+				void set(String^ value);
+			}
+			property Point3d Location
+			{
+				Point3d get();
+				void set(Point3d value);
+			}
+			property Vector3d Normal
+			{
+				Vector3d get();
+				void set(Vector3d value);
+			}
+			property double Rotation
+			{
+				double get();
+				void set(double value);
+			}
+			property double TextHeight
+			{
+				double get();
+				void set(double value);
+			}
+			property Autodesk::AutoCAD::DatabaseServices::ObjectId^ TextStyle
+			{
+				 Autodesk::AutoCAD::DatabaseServices::ObjectId^ get();
+				void set(Autodesk::AutoCAD::DatabaseServices::ObjectId^ value);
+			}
+			property double Width
+			{
+				double get();
+				void set(double value);
+			}
 		} ;
 
 	}

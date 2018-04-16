@@ -42,3 +42,131 @@ ztAcadMgd::DatabaseServices::MText::MText (System::IntPtr unmanagedPointer, bool
 	: Autodesk::AutoCAD::DatabaseServices::Entity (unmanagedPointer, bAutoDelete)
 {
 }
+
+double ztAcadMgd::DatabaseServices::MText::ActualHeight::get()
+{
+	return GetImpObj()->actualHeight();
+}
+
+double ztAcadMgd::DatabaseServices::MText::ActualWidth::get()
+{
+	return GetImpObj()->actualWidth();
+}
+
+String^ ztAcadMgd::DatabaseServices::MText::AlignChange::get()
+{
+	return CIFToString(AcDbMText::alignChange());
+}
+
+double ztAcadMgd::DatabaseServices::MText::Ascent::get()
+{
+	return GetImpObj()->ascent();
+}
+
+String^ ztAcadMgd::DatabaseServices::MText::BlockEnd::get()
+{
+	return CIFToString(AcDbMText::blockEnd());
+}
+
+String^ ztAcadMgd::DatabaseServices::MText::ColorChange::get()
+{
+	return CIFToString(AcDbMText::colorChange());
+}
+
+String^ ztAcadMgd::DatabaseServices::MText::Contents::get()
+{
+	return CIFToString(GetImpObj()->contents());
+}
+
+void ztAcadMgd::DatabaseServices::MText::Contents::set(String^ value)
+{
+	int r = GetImpObj()->setContents(StringToCIF(value));
+	if (r != 0)
+	{
+		throw gcnew Autodesk::AutoCAD::Runtime::Exception(safe_cast<Autodesk::AutoCAD::Runtime::ErrorStatus>(r));
+	}
+}
+
+Point3d ztAcadMgd::DatabaseServices::MText::Location::get()
+{
+	return ToPoint3d(GetImpObj()->location());
+}
+
+void ztAcadMgd::DatabaseServices::MText::Location::set(Point3d value)
+{
+	int r = GetImpObj()->setLocation(GETPOINT3D(value));
+	if (r != 0)
+	{
+		throw gcnew Autodesk::AutoCAD::Runtime::Exception(safe_cast<Autodesk::AutoCAD::Runtime::ErrorStatus>(r));
+	}
+}
+
+Vector3d ztAcadMgd::DatabaseServices::MText::Normal::get()
+{
+	return ToVector3d(GetImpObj()->normal());
+}
+
+void ztAcadMgd::DatabaseServices::MText::Normal::set(Vector3d value)
+{
+	int r = GetImpObj()->setNormal(GETVECTOR3D(value));
+	if (r != 0)
+	{
+		throw gcnew Autodesk::AutoCAD::Runtime::Exception(safe_cast<Autodesk::AutoCAD::Runtime::ErrorStatus>(r));
+	}
+}
+
+double ztAcadMgd::DatabaseServices::MText::Rotation::get()
+{
+	return GetImpObj()->rotation();
+}
+
+void ztAcadMgd::DatabaseServices::MText::Rotation::set(double value)
+{
+	int r = GetImpObj()->setRotation(value);
+	if (r != 0)
+	{
+		throw gcnew Autodesk::AutoCAD::Runtime::Exception(safe_cast<Autodesk::AutoCAD::Runtime::ErrorStatus>(r));
+	}
+}
+
+double ztAcadMgd::DatabaseServices::MText::TextHeight::get()
+{
+	return GetImpObj()->textHeight();
+}
+
+void ztAcadMgd::DatabaseServices::MText::TextHeight::set(double value)
+{
+	int r = GetImpObj()->setTextHeight(value);
+	if (r != 0)
+	{
+		throw gcnew Autodesk::AutoCAD::Runtime::Exception(safe_cast<Autodesk::AutoCAD::Runtime::ErrorStatus>(r));
+	}
+}
+
+ObjectId^ ztAcadMgd::DatabaseServices::MText::TextStyle::get()
+{
+	return ToObjectId(GetImpObj()->textStyle());
+}
+
+void ztAcadMgd::DatabaseServices::MText::TextStyle::set(Autodesk::AutoCAD::DatabaseServices::ObjectId^ value)
+{
+	int r = GetImpObj()->setTextStyle(GETOBJECTID(value));
+	if (r != 0)
+	{
+		throw gcnew Autodesk::AutoCAD::Runtime::Exception(safe_cast<Autodesk::AutoCAD::Runtime::ErrorStatus>(r));
+	}
+}
+
+double ztAcadMgd::DatabaseServices::MText::Width::get()
+{
+	return GetImpObj()->width();
+}
+
+void ztAcadMgd::DatabaseServices::MText::Width::set(double value)
+{
+	int r = GetImpObj()->setWidth(value);
+	if (r != 0)
+	{
+		throw gcnew Autodesk::AutoCAD::Runtime::Exception(safe_cast<Autodesk::AutoCAD::Runtime::ErrorStatus>(r));
+	}
+}

@@ -51,6 +51,18 @@
     <ClCompile Include="ztacadmgd.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="BlockReference.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Dimension.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Group.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Polyline.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="StdAfx.h">
@@ -81,6 +93,18 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="MText.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="BlockReference.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Dimension.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Group.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Polyline.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

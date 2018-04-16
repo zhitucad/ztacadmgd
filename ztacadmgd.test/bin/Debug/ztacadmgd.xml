@@ -13247,14 +13247,29 @@ for the targeted class.
 Internal use only. Base class for all overrules.
 </description>
         </member>
-        <member name="T:ztAcadMgd.DatabaseServices.DBText">
+        <member name="T:ztAcadMgd.DatabaseServices.BlockReference">
             <summary>  
-单行文字
+块引用
+</summary>
+        </member>
+        <member name="T:ztAcadMgd.DatabaseServices.Polyline">
+            <summary>  
+多段线
+</summary>
+        </member>
+        <member name="T:ztAcadMgd.DatabaseServices.Group">
+            <summary>  
+组
 </summary>
         </member>
         <member name="T:ztAcadMgd.DatabaseServices.MText">
             <summary>  
 多行文字
+</summary>
+        </member>
+        <member name="T:ztAcadMgd.DatabaseServices.DBText">
+            <summary>  
+单行文字
 </summary>
         </member>
         <member name="T:ztAcadMgd.DatabaseServices.Circle">
